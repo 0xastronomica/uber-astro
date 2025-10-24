@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  api-gateway:
+    build:
+      context: ./services/api-gateway
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    depends_on:
+      - auth-service
+      - rider-service
+      - driver-service
+      - matching-service
+      - billing-service
+      - notification-service
+
+  auth-service:
+    build:
+      context: ./services/auth-service
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+
+  rider-service:
+    build:
+      context: ./services/rider-service
+      dockerfile: Dockerfile
+    ports:
+      - "3002:3002"
+
+  driver-service:
+    build:
+      context: ./services/driver-service
+      dockerfile: Dockerfile
+    ports:
+      - "3003:3003"
+
+  matching-service:
+    build:
+      context: ./services/matching-service
+      dockerfile: Dockerfile
+    ports:
+      - "3004:3004"
+
+  billing-service:
+    build:
+      context: ./services/billing-service
+      dockerfile: Dockerfile
+    ports:
+      - "3005:3005"
+
+  notification-service:
+    build:
+      context: ./services/notification-service
+      dockerfile: Dockerfile
+    ports:
+      - "3006:3006"
+
+networks:
+  default:
+    driver: bridge
+
+volumes:
+  db_data:
+    driver: local

@@ -1,0 +1,37 @@
+{
+  "name": "ride-sharing-app",
+  "version": "1.0.0",
+  "description": "A ride-sharing application similar to Uber.",
+  "main": "App.js",
+  "scripts": {
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "test": "jest"
+  },
+  "dependencies": {
+    "react": "17.0.2",
+    "react-native": "0.66.4",
+    "react-navigation": "^4.4.4",
+    "axios": "^0.21.1",
+    "redux": "^4.1.0",
+    "react-redux": "^7.2.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/runtime": "^7.12.5",
+    "jest": "^26.6.0",
+    "babel-jest": "^26.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ride-sharing-app.git"
+  },
+  "keywords": [
+    "ride-sharing",
+    "uber",
+    "react-native"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
